@@ -33,17 +33,18 @@ public enum dropDownViewImageType: String {
     case search_black
 }
 
-final class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
+final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var tableView = UITableView()
     private var dropDownOptions = [Any]() // Display the value of this Array in dropDownView
     private var viewType: dropDownViewType = .string // What sets the value type to display in dropDownView. If string, treat dropDownViewOptions as String type
     
     var delegate: dropDownViewProtocol! // delegate for sending messages to dropDownBtn
-    var dropViewWidth: CGFloat? // Set the value when changing width of dropDownView to width of dropDownBtn
+    
+    public var dropViewWidth: CGFloat? // Set the value when changing width of dropDownView to width of dropDownBtn
     
     // Override the backgroundColor and set the value of tableView backgroundColor. Set backgroundColor of DropDownView to clear
-    override var backgroundColor: UIColor? {
+    override public var backgroundColor: UIColor? {
         get {
             return tableView.backgroundColor ?? .clear
         }
@@ -57,7 +58,7 @@ final class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         initSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSetup()
     }
@@ -80,29 +81,29 @@ final class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     // func to set the option to display in dropDownView and dropDownViewType.
-    func setupDropDownViews<T>(options: [T], type: dropDownViewType) {
+    public func setupDropDownViews<T>(options: [T], type: dropDownViewType) {
         for option in options {
             dropDownOptions.append(option)
         }
         viewType = type
     }
 
-    func setupDropDownViews(options: [dropDownViewImageType]) {
+    public func setupDropDownViews(options: [dropDownViewImageType]) {
         for option in options {
             dropDownOptions.append(UIImage(named: option.rawValue)!)
         }
         viewType = dropDownViewType.image
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dropDownOptions.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = .clear
         
@@ -125,7 +126,7 @@ final class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch viewType {
         case .string:
             delegate.dropDownPressed(option: dropDownOptions[indexPath.row] as! String, indexPath: indexPath.row, dropDownViewType: viewType)
