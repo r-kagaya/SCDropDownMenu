@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E32BC2BF20300F9F001963C1 /* SCDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32BC2E42030120F001963C1 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E32030120F001963C1 /* DropDownBtn.swift */; };
+		E32BC2E620301216001963C1 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E520301216001963C1 /* DropDownView.swift */; };
+		E32BC2E820301222001963C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32BC2E720301222001963C1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E32BC2BA20300F9F001963C1 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDropDownMenu.h; sourceTree = "<group>"; };
 		E32BC2BE20300F9F001963C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E32BC2E32030120F001963C1 /* DropDownBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownBtn.swift; sourceTree = "<group>"; };
+		E32BC2E520301216001963C1 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		E32BC2E720301222001963C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +52,11 @@
 		E32BC2BC20300F9F001963C1 /* SCDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E32BC2E32030120F001963C1 /* DropDownBtn.swift */,
+				E32BC2E520301216001963C1 /* DropDownView.swift */,
 				E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */,
 				E32BC2BE20300F9F001963C1 /* Info.plist */,
+				E32BC2E720301222001963C1 /* Assets.xcassets */,
 			);
 			path = SCDropDownMenu;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32BC2E820301222001963C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32BC2E42030120F001963C1 /* DropDownBtn.swift in Sources */,
+				E32BC2E620301216001963C1 /* DropDownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
