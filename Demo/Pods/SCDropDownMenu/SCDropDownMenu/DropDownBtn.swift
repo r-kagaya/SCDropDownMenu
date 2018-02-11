@@ -8,7 +8,7 @@ protocol dropDownViewProtocol {
 
 
 // DropDownBtn Delegate
-protocol dropDownProtocol: class {
+public protocol dropDownProtocol: class {
     func dropDownDidSelectAt(indexPath: Int, type: dropDownViewType)
     func dropDownViewWillShow(dropDownBtn: DropDownBtn)
     func dropDownViewDidShow(dropDownBtn: DropDownBtn)
@@ -25,7 +25,19 @@ extension dropDownProtocol {
 }
 
 
-final class DropDownBtn: UIButton, dropDownViewProtocol {
+/** Type of title of DropDownBtn. Whether to display a character string or an image
+ * sentence -> display sentence
+ * more_vert_white -> Display an image in which three white dots are arranged vertically
+ * more_vert_black -> Display an image in which three black dots are arranged vertically
+ */
+public enum dropDownBtnType: String {
+    case sentence
+    case more_vert_white
+    case more_vert_black
+}
+
+
+final public class DropDownBtn: UIButton, dropDownViewProtocol {
 
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
     var dropView = DropDownView() // DropDownView held by dropDownBtn
@@ -55,7 +67,7 @@ final class DropDownBtn: UIButton, dropDownViewProtocol {
         delegate?.dropDownDidSelectAt(indexPath: indexPath, type: dropDownViewType)
         
         if btnType == dropDownBtnType.sentence {
-            self.setTitle(option as!String, for: .normal)
+            self.setTitle(option as? String, for: .normal)
         }
     }
 
@@ -67,17 +79,6 @@ final class DropDownBtn: UIButton, dropDownViewProtocol {
 //    }
 //    func addAction(_ handler: () -> Void ) {
 //    }
-    
-    /** Type of title of DropDownBtn. Whether to display a character string or an image
-     * sentence -> display sentence
-     * more_vert_white -> Display an image in which three white dots are arranged vertically
-     * more_vert_black -> Display an image in which three black dots are arranged vertically
-     */
-    enum dropDownBtnType: String {
-        case sentence
-        case more_vert_white
-        case more_vert_black
-    }
 
     private var btnType: dropDownBtnType = .sentence // The value of the configured dropDownBtnType. The initial value is sentence
     
@@ -94,7 +95,7 @@ final class DropDownBtn: UIButton, dropDownViewProtocol {
         initSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSetup()
     }
@@ -122,7 +123,7 @@ final class DropDownBtn: UIButton, dropDownViewProtocol {
         }
     }
     
-    override func didMoveToSuperview() {
+    override public func didMoveToSuperview() {
         self.superview?.addSubview(dropView)
         self.superview?.bringSubview(toFront: dropView)
  
@@ -139,7 +140,7 @@ final class DropDownBtn: UIButton, dropDownViewProtocol {
     }
     
     var isOpen = false
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isOpen == false {
             
             delegate?.dropDownViewWillShow(dropDownBtn: self)

@@ -3,12 +3,12 @@ import Foundation
 import UIKit
 
 
-enum dropDownViewType: Int {
+public enum dropDownViewType: Int {
     case string
     case image
 }
 
-enum dropDownViewImageType: String {
+public enum dropDownViewImageType: String {
     case more_vert_white
     case more_vert_black
     case done_white

@@ -7,5 +7,4 @@ target 'Demo' do
 
   # Pods for Demo
   pod 'SCDropDownMenu', '~> 0.0'
-
 end
