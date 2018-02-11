@@ -124,8 +124,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
             setTitle("", for: .normal)
             
         case .more_vert_black, .more_vert_white:
-            setImage(UIImage(named: type.rawValue, in: Bundle.current, compatibleWith: nil), for: .normal)
-
+            setImage(UIImage(named: type.rawValue, in: Bundle.main, compatibleWith: nil)!, for: .normal)
         }
     }
     
