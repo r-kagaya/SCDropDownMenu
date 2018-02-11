@@ -70,6 +70,7 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(tableView)
@@ -90,7 +91,7 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
 
     public func setupDropDownViews(options: [dropDownViewImageType]) {
         for option in options {
-            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle.current, compatibleWith: nil)!)
+            dropDownOptions.append(DropDownBtn.getImage(named: option.rawValue))
         }
         viewType = dropDownViewType.image
     }
@@ -106,6 +107,7 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         
         let label = UILabel(frame: CGRect(x: 5, y: 0, width: tableView.frame.width - 10, height: cell.frame.height))
         cell.addSubview(label)

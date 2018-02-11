@@ -26,11 +26,10 @@ class ViewController: UIViewController {
     }
     
     private func setupDropDownButton() {
-        let dropDownBtn = DropDownBtn(dropDownBtnType: .more_vert_black)
+        let dropDownBtn = DropDownBtn(dropDownBtnType: .more_vert_white)
         dropDownBtn.delegate = self
-        dropDownBtn.setTitle("Color", for: .normal)
         dropDownBtn.backgroundColor = .black
-        dropDownBtn.dropView.setupDropDownViews(options: ["black", "white", "blue"], type: .string)
+        dropDownBtn.dropView.setupDropDownViews(options: [.add_black])
         dropDownBtn.dropView.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
         self.view.addSubview(dropDownBtn)
         

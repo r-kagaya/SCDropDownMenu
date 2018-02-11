@@ -45,6 +45,11 @@ public enum dropDownBtnType: String {
 
 final public class DropDownBtn: UIButton, dropDownViewProtocol {
 
+    public class func getImage(named: String) -> UIImage? {
+        let bundle = Bundle(for: self)
+        return UIImage(named: named, in: bundle, compatibleWith: nil)
+    }
+    
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
     public var dropView = DropDownView() // DropDownView held by dropDownBtn
     public weak var delegate: dropDownProtocol? // Protocol for sending messages to the caller
@@ -125,9 +130,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
             
         case .more_vert_black, .more_vert_white:
 //            setImage(UIImage(named: type.rawValue, in: Bundle.current, compatibleWith: nil), for: .normal)
-            guard let bundle = Bundle.main.path(forResource: "sample", ofType: "png") else { return }
-            let image = UIImage(contentsOfFile: bundle)!
-            setImage(image, for: .normal)
+            setImage(DropDownBtn.getImage(named: type.rawValue), for: .normal)
         }
     }
     
