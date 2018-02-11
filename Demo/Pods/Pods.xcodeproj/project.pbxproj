@@ -14,7 +14,6 @@
 		A894CBBD981CA896A28610E5670063C5 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E10FC6A1EF0230870DBC271CA9091F7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		E1F8200FE136F86A02A9B224FFD24855 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937773D0A1288731819F7A2233CA2AE /* DropDownBtn.swift */; };
-		E354A7E9203082F8006C738A /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E354A7E8203082F8006C738A /* DropViewController.swift */; };
 		FD2CE59F9761080DF1E867910C6714A0 /* SCDropDownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9FD5C9006707F36CDC76F12AAB5778 /* SCDropDownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -50,8 +49,6 @@
 		D7C2E4860C221D7366CCB8A918B52656 /* DropDownView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownView.swift; path = SCDropDownMenu/DropDownView.swift; sourceTree = "<group>"; };
 		DA9CA09F85A489462C2F529A8CAF9FF4 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE920B2FD551AD9A56DFCC6DA33852B /* SCDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCDropDownMenu.xcconfig; sourceTree = "<group>"; };
-		E354A7E7203082DE006C738A /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		E354A7E8203082F8006C738A /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		EB2BD00EE3F4FBA187EE15A5C9968F90 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +153,6 @@
 			children = (
 				1937773D0A1288731819F7A2233CA2AE /* DropDownBtn.swift */,
 				D7C2E4860C221D7366CCB8A918B52656 /* DropDownView.swift */,
-				E354A7E7203082DE006C738A /* Storyboard.storyboard */,
-				E354A7E8203082F8006C738A /* DropViewController.swift */,
 				C2D3F45CAACF45FDED3CE71EAE8BC12C /* Support Files */,
 			);
 			path = SCDropDownMenu;
@@ -266,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEE8BACC9AD947B5997F40738B6173B /* Pods-Demo-dummy.m in Sources */,
-				E354A7E9203082F8006C738A /* DropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
