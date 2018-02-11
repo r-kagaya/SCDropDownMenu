@@ -11,6 +11,7 @@
 		E32BC2E42030120F001963C1 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E32030120F001963C1 /* DropDownBtn.swift */; };
 		E32BC2E620301216001963C1 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E520301216001963C1 /* DropDownView.swift */; };
 		E32BC2E820301222001963C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32BC2E720301222001963C1 /* Assets.xcassets */; };
+		E354A7ED20308DB9006C738A /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = E354A7EC20308DB9006C738A /* sample.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E32BC2E32030120F001963C1 /* DropDownBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownBtn.swift; sourceTree = "<group>"; };
 		E32BC2E520301216001963C1 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		E32BC2E720301222001963C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E354A7EC20308DB9006C738A /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 			children = (
 				E32BC2E32030120F001963C1 /* DropDownBtn.swift */,
 				E32BC2E520301216001963C1 /* DropDownView.swift */,
+				E354A7EC20308DB9006C738A /* sample.png */,
 				E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */,
-				E32BC2BE20300F9F001963C1 /* Info.plist */,
 				E32BC2E720301222001963C1 /* Assets.xcassets */,
+				E32BC2BE20300F9F001963C1 /* Info.plist */,
 			);
 			path = SCDropDownMenu;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E32BC2E820301222001963C1 /* Assets.xcassets in Resources */,
+				E354A7ED20308DB9006C738A /* sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

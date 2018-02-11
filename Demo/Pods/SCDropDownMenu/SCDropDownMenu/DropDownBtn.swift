@@ -124,7 +124,10 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
             setTitle("", for: .normal)
             
         case .more_vert_black, .more_vert_white:
-            setImage(UIImage(named: type.rawValue, in: Bundle.main, compatibleWith: nil)!, for: .normal)
+//            let bundle = Bundle.current
+            guard let bundle = Bundle.main.path(forResource: "sample", ofType: "png") else { return }
+            let image = UIImage(contentsOfFile: bundle)!
+            setImage(image, for: .normal)
         }
     }
     
