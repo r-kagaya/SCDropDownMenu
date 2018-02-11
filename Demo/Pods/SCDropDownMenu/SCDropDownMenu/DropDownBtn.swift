@@ -45,9 +45,9 @@ public enum dropDownBtnType: String {
 
 final public class DropDownBtn: UIButton, dropDownViewProtocol {
 
-    public class func getImage(named: String) -> UIImage! {
+    public class func getImage(named: String) -> UIImage? {
         let bundle = Bundle(for: self)
-        return UIImage(named: named, in: bundle, compatibleWith: nil)!
+        return UIImage(named: named, in: bundle, compatibleWith: nil)
     }
     
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
@@ -129,6 +129,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
             setTitle("", for: .normal)
             
         case .more_vert_black, .more_vert_white:
+//            setImage(UIImage(named: type.rawValue, in: Bundle.current, compatibleWith: nil), for: .normal)
             setImage(DropDownBtn.getImage(named: type.rawValue), for: .normal)
         }
     }

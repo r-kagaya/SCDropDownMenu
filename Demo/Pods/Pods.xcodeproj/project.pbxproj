@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BD1D8E00730C8EABDE4CA0E8AEC36C9 /* SCDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EDDEC72B48D35B9E0339ACAF3C8A8 /* SCDropDownMenu-dummy.m */; };
+		3BD1D8E00730C8EABDE4CA0E8AEC36C9 /* SCDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */; };
 		6BC6395393B2C5E4FB53F12565425851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6FEE8BACC9AD947B5997F40738B6173B /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */; };
-		84D376A60B1EC2CB77972D7DC58444A3 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2E4860C221D7366CCB8A918B52656 /* DropDownView.swift */; };
+		84D376A60B1EC2CB77972D7DC58444A3 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F712606265759533903E69D69E69 /* DropDownView.swift */; };
 		A894CBBD981CA896A28610E5670063C5 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7C74CE837DCC5F2A18303C12601C54 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */; };
 		E10FC6A1EF0230870DBC271CA9091F7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E1F8200FE136F86A02A9B224FFD24855 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1937773D0A1288731819F7A2233CA2AE /* DropDownBtn.swift */; };
-		FD2CE59F9761080DF1E867910C6714A0 /* SCDropDownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9FD5C9006707F36CDC76F12AAB5778 /* SCDropDownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1F8200FE136F86A02A9B224FFD24855 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */; };
+		FD2CE59F9761080DF1E867910C6714A0 /* SCDropDownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,28 +29,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownBtn.swift; path = SCDropDownMenu/DropDownBtn.swift; sourceTree = "<group>"; };
 		1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
 		18DFBD547939032C78F638BCA4F47951 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Demo.framework; path = "Pods-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1937773D0A1288731819F7A2233CA2AE /* DropDownBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownBtn.swift; path = SCDropDownMenu/DropDownBtn.swift; sourceTree = "<group>"; };
 		1965FF76BB91163730C384D7B1E2C4FB /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
+		209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = SCDropDownMenu/Media.xcassets; sourceTree = "<group>"; };
+		255A48D297C3140ECA4840D4795247E1 /* SCDropDownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCDropDownMenu.modulemap; sourceTree = "<group>"; };
 		275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
 		282ECFCD0084F94EC1DED9401AAFE7F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A9EDDEC72B48D35B9E0339ACAF3C8A8 /* SCDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCDropDownMenu-dummy.m"; sourceTree = "<group>"; };
-		588869334A9C9C7C29F69559CD348D22 /* SCDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
+		4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCDropDownMenu-dummy.m"; sourceTree = "<group>"; };
+		5D271875198248C43604BC0DF1B13635 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EFCFC4782B9646B842EB839A267D7AA /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6E9FD5C9006707F36CDC76F12AAB5778 /* SCDropDownMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-umbrella.h"; sourceTree = "<group>"; };
 		7A01701031823CCAC30B58767A21D8A4 /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
 		9154BF16DC759A1EDD6A1AB4E22AA07D /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		B9340A3EEA9CAECD80724A68239754DE /* SCDropDownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCDropDownMenu.modulemap; sourceTree = "<group>"; };
-		BE9C2240F6E0FB994CA81F9784D01C7D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7C2E4860C221D7366CCB8A918B52656 /* DropDownView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownView.swift; path = SCDropDownMenu/DropDownView.swift; sourceTree = "<group>"; };
+		C228A1D92E6CEDB93C7A35E5E7AD31BF /* SCDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
 		DA9CA09F85A489462C2F529A8CAF9FF4 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCDropDownMenu.framework; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFE920B2FD551AD9A56DFCC6DA33852B /* SCDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCDropDownMenu.xcconfig; sourceTree = "<group>"; };
 		EB2BD00EE3F4FBA187EE15A5C9968F90 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
+		F481F712606265759533903E69D69E69 /* DropDownView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownView.swift; path = SCDropDownMenu/DropDownView.swift; sourceTree = "<group>"; };
+		FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCDropDownMenu.xcconfig; sourceTree = "<group>"; };
+		FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2CD084D33780AFFB27C3E1CC4383EAC7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D271875198248C43604BC0DF1B13635 /* Info.plist */,
+				255A48D297C3140ECA4840D4795247E1 /* SCDropDownMenu.modulemap */,
+				FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */,
+				4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */,
+				C228A1D92E6CEDB93C7A35E5E7AD31BF /* SCDropDownMenu-prefix.pch */,
+				FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCDropDownMenu";
+			sourceTree = "<group>";
+		};
 		6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,15 +105,31 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7D3812598BD02AF49E88C2CE773F9B5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9B0857C09665C4A153E0562529E6299 /* SCDropDownMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F1175CB55733EFD5723F8E89087FBB6F /* Pods */,
+				7D3812598BD02AF49E88C2CE773F9B5C /* Pods */,
 				2C6EE1B7829E35003BA6567A54045815 /* Products */,
 				6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		B48D81D4E6D8D7C2B3C243EA3757D4F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -106,20 +138,6 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C2D3F45CAACF45FDED3CE71EAE8BC12C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE9C2240F6E0FB994CA81F9784D01C7D /* Info.plist */,
-				B9340A3EEA9CAECD80724A68239754DE /* SCDropDownMenu.modulemap */,
-				DFE920B2FD551AD9A56DFCC6DA33852B /* SCDropDownMenu.xcconfig */,
-				2A9EDDEC72B48D35B9E0339ACAF3C8A8 /* SCDropDownMenu-dummy.m */,
-				588869334A9C9C7C29F69559CD348D22 /* SCDropDownMenu-prefix.pch */,
-				6E9FD5C9006707F36CDC76F12AAB5778 /* SCDropDownMenu-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SCDropDownMenu";
 			sourceTree = "<group>";
 		};
 		CF58A9AAA805FDF37F67723722F14D8F /* Pods-Demo */ = {
@@ -148,23 +166,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E52D95EFBB4D9BD4D712A82498DC8D2A /* SCDropDownMenu */ = {
+		E9B0857C09665C4A153E0562529E6299 /* SCDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1937773D0A1288731819F7A2233CA2AE /* DropDownBtn.swift */,
-				D7C2E4860C221D7366CCB8A918B52656 /* DropDownView.swift */,
-				C2D3F45CAACF45FDED3CE71EAE8BC12C /* Support Files */,
+				03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */,
+				F481F712606265759533903E69D69E69 /* DropDownView.swift */,
+				B48D81D4E6D8D7C2B3C243EA3757D4F8 /* Resources */,
+				2CD084D33780AFFB27C3E1CC4383EAC7 /* Support Files */,
 			);
 			name = SCDropDownMenu;
 			path = SCDropDownMenu;
-			sourceTree = "<group>";
-		};
-		F1175CB55733EFD5723F8E89087FBB6F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E52D95EFBB4D9BD4D712A82498DC8D2A /* SCDropDownMenu */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			buildPhases = (
 				DC5DE2CB053B3C15F1DAD75849524951 /* Sources */,
 				0A60520EA85678D5CEE1994CB5499183 /* Frameworks */,
+				22287123C5DBAECA191370F7FEF58A02 /* Resources */,
 				C4753DDA9555D8ADCD0CF5B6C0A2C58A /* Headers */,
 			);
 			buildRules = (
@@ -250,6 +262,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22287123C5DBAECA191370F7FEF58A02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7C74CE837DCC5F2A18303C12601C54 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A40FF093EF7CE43B26C2C6A18446E073 /* Sources */ = {
@@ -382,7 +405,7 @@
 		};
 		69FC2A6DA3B8AEFFF1F5F50235238D76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE920B2FD551AD9A56DFCC6DA33852B /* SCDropDownMenu.xcconfig */;
+			baseConfigurationReference = FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -450,7 +473,7 @@
 		};
 		B3CA7E84B2E56472F6870639D0040710 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE920B2FD551AD9A56DFCC6DA33852B /* SCDropDownMenu.xcconfig */;
+			baseConfigurationReference = FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

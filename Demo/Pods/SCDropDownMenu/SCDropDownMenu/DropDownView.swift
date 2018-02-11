@@ -91,7 +91,8 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
 
     public func setupDropDownViews(options: [dropDownViewImageType]) {
         for option in options {
-            dropDownOptions.append(DropDownBtn.getImage(named: option.rawValue))
+//            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle.current, compatibleWith: nil)!)
+            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle(identifier: "SCDropDownMenu"), compatibleWith: nil)!)
         }
         viewType = dropDownViewType.image
     }

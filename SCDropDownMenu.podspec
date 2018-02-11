@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SCDropDownMenu"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "Simple and customizable swift dropdown menu."
   s.description  = <<-DESC
                    Simple and customizable swift dropdown menu.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/r-kaga/SCDropDownMenu.git", :tag => s.version.to_s }
 
-  s.source_files  = "SCDropDownMenu/*.swift,"
+  s.source_files  = "SCDropDownMenu/*.swift"
   s.resources  = "SCDropDownMenu/*.xcassets"
 
 
