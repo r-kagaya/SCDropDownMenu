@@ -1,0 +1,6 @@
+framework module SCDropDownMenu {
+  umbrella header "SCDropDownMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}
