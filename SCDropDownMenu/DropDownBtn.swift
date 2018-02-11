@@ -24,6 +24,12 @@ extension dropDownProtocol {
     func dropDownViewDidHide(dropDownBtn: DropDownBtn) { }
 }
 
+extension Bundle {
+    static var current: Bundle {
+        class dummyClass{}
+        return Bundle(for: type(of: dummyClass()))
+    }
+}
 
 /** Type of title of DropDownBtn. Whether to display a character string or an image
  * sentence -> display sentence
@@ -65,9 +71,9 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         }
         delegate?.dropDownDidSelectAt(indexPath: indexPath, type: dropDownViewType)
         
-        if btnType == dropDownBtnType.sentence {
-            self.setTitle(option as? String, for: .normal)
-        }
+//        if btnType == dropDownBtnType.sentence {
+//            self.setTitle(option as? String, for: .normal)
+//        }
     }
 
 //    private var optionsAction = [String: ( () -> Void) ]()
@@ -118,7 +124,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
             setTitle("", for: .normal)
             
         case .more_vert_black, .more_vert_white:
-            setImage(UIImage(named: type.rawValue)!, for: .normal)
+            setImage(UIImage(named: type.rawValue, in: Bundle.current, compatibleWith: nil), for: .normal)
             
         }
     }

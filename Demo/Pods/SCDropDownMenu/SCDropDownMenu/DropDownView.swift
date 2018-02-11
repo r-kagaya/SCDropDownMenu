@@ -90,7 +90,7 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
 
     public func setupDropDownViews(options: [dropDownViewImageType]) {
         for option in options {
-            dropDownOptions.append(UIImage(named: option.rawValue)!)
+            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle.current, compatibleWith: nil)!)
         }
         viewType = dropDownViewType.image
     }
