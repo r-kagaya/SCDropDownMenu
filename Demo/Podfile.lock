@@ -1,11 +1,11 @@
 PODS:
-  - SCDropDownMenu (0.0.2)
+  - SCDropDownMenu (0.0.3)
 
 DEPENDENCIES:
   - SCDropDownMenu (~> 0.0)
 
 SPEC CHECKSUMS:
-  SCDropDownMenu: ba332e73a87df91f42df9e3c89a59db9a27f87c0
+  SCDropDownMenu: 6fef7d54c8f2e3074588936b7318d65c7996e011
 
 PODFILE CHECKSUM: 59e2b192b66883631d3923492bfcf1d500692b45
 

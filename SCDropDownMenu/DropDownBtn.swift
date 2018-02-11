@@ -40,8 +40,8 @@ public enum dropDownBtnType: String {
 final public class DropDownBtn: UIButton, dropDownViewProtocol {
 
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
-    var dropView = DropDownView() // DropDownView held by dropDownBtn
-    weak var delegate: dropDownProtocol? // Protocol for sending messages to the caller
+    public var dropView = DropDownView() // DropDownView held by dropDownBtn
+    public weak var delegate: dropDownProtocol? // Protocol for sending messages to the caller
 
 //    var dropDownOptions: [String]  {
 //        get {

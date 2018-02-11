@@ -41,7 +41,6 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
 
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
     var dropView = DropDownView() // DropDownView held by dropDownBtn
-    var cicleView = UIView()
     weak var delegate: dropDownProtocol? // Protocol for sending messages to the caller
 
 //    var dropDownOptions: [String]  {
@@ -84,7 +83,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
     
     /** initializer. frame is set to initialize with zero by default. You must specify dropDownBtnType
      */
-    convenience init(frame: CGRect = .zero, dropDownBtnType type: dropDownBtnType) {
+    public convenience init(frame: CGRect = .zero, dropDownBtnType type: dropDownBtnType) {
         self.init(frame: frame)
         btnType = type
         setupBtnFrom(type: type)
