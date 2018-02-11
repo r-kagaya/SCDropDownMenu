@@ -67,7 +67,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         delegate?.dropDownDidSelectAt(indexPath: indexPath, type: dropDownViewType)
         
         if btnType == dropDownBtnType.sentence {
-            self.setTitle(option as!String, for: .normal)
+            self.setTitle(option as? String, for: .normal)
         }
     }
 
