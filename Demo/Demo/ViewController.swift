@@ -4,31 +4,43 @@ import SCDropDownMenu
 
 class ViewController: UIViewController {
 
-    var dropButton: DropDownBtn!
+    private var navigationDropDownMenu: DropDownBtn!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dropButton = DropDownBtn(dropDownBtnType: .more_vert_black)
-        dropButton.delegate = self
-        dropButton.dropView.setupDropDownViews(options: [.delete_white])
-        dropButton.dropView.backgroundColor = .black
-        dropButton.backgroundColor = .clear
-        self.view.addSubview(dropButton)
-        
-        dropButton.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        dropButton.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        dropButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        dropButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        setupNavigationDropDownMenu()
+        setupDropDownButton()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupNavigationDropDownMenu() {
+        navigationDropDownMenu = DropDownBtn(dropDownBtnType: .sentence)
+        navigationDropDownMenu.setTitle("Colors", for: .normal)
+        navigationDropDownMenu.backgroundColor = .black
+        navigationDropDownMenu.dropView.setupDropDownViews(options: ["black", "white", "blue"], type: .string)
+        navigationDropDownMenu.dropView.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
+        self.view.addSubview(navigationDropDownMenu)
+        
+        navigationDropDownMenu.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        navigationDropDownMenu.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        navigationDropDownMenu.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        navigationDropDownMenu.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-
+    
+    private func setupDropDownButton() {
+        let dropDownBtn = DropDownBtn(dropDownBtnType: .sentence)
+        dropDownBtn.delegate = self
+        dropDownBtn.setTitle("Color", for: .normal)
+        dropDownBtn.backgroundColor = .black
+        dropDownBtn.dropView.setupDropDownViews(options: ["black", "white", "blue"], type: .string)
+        dropDownBtn.dropView.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
+        self.view.addSubview(dropDownBtn)
+        
+        dropDownBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        dropDownBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        dropDownBtn.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        dropDownBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
 
 }
-
 
 extension ViewController: dropDownProtocol {
     func dropDownViewDidShow(dropDownBtn: DropDownBtn) {
@@ -50,23 +62,23 @@ extension ViewController: dropDownProtocol {
     
     func dropDownViewWillShow(dropDownBtn: DropDownBtn) {
         UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-            let angle = 90 * CGFloat.pi / 180
-            dropDownBtn.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-            dropDownBtn.backgroundColor = .black
+//            let angle = 90 * CGFloat.pi / 180
+//            dropDownBtn.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+            dropDownBtn.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
         }, completion: { _ in
             UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseOut], animations: {
-                dropDownBtn.imageView?.image = UIImage(named: "more_vert_white")!
+//                dropDownBtn.imageView?.image = UIImage(named: "more_vert_white")!
             })
         })
     }
     
     func dropDownViewWillHide(dropDownBtn: DropDownBtn) {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseIn], animations: {
-            dropDownBtn.backgroundColor = .clear
-            dropDownBtn.imageView?.image = UIImage(named: "more_vert_black")!
+            dropDownBtn.backgroundColor = .black
+//            dropDownBtn.imageView?.image = UIImage(named: "more_vert_black")!
         }, completion: { _ in
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
-                dropDownBtn.transform = .identity
+//                dropDownBtn.transform = .identity
             })
         })
     }
