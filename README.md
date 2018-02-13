@@ -2,7 +2,7 @@
 
 ## Example
 
-```
+```swift
 navigationDropDownMenu = DropDownBtn(dropDownBtnType: .sentence)
 navigationDropDownMenu.setTitle("Colors", for: .normal)
 navigationDropDownMenu.backgroundColor = .black
@@ -16,7 +16,7 @@ navigationDropDownMenu.widthAnchor.constraint(equalTo: self.view.widthAnchor).is
 navigationDropDownMenu.heightAnchor.constraint(equalToConstant: 50).isActive = true
 ```
 
-```
+```swift
 let dropDownBtn = DropDownBtn(dropDownBtnType: .more_vert_white)
 dropDownBtn.delegate = self
 dropDownBtn.backgroundColor = .black
@@ -32,7 +32,7 @@ dropDownBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
 
 ## Customize
 
-```
+```swift
 extension ViewController: SCDropDownMenuDelegate {
 
     func dropDownMenu(didSelectAt indexPath: Int, type: dropDownViewType) {
