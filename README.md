@@ -1,5 +1,21 @@
 # SCDropDownMenu
 
+## Requirements
+SCDropDownMenu is written in Swift 3. iOS 8.0+ Required
+
+## Installation
+SCDropDownMenu is available through CocoaPods or Carthage.
+
+### Cocoapods
+```
+pod "SCDropDownMenu"
+```
+
+### Carthage
+```
+github "r-kaga/SCDropDownMenu"
+```
+
 ## Example
 
 ```swift
