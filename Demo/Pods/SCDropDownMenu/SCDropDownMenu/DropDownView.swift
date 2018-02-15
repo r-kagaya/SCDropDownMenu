@@ -2,13 +2,15 @@
 import Foundation
 import UIKit
 
-
+// Type of Options displayed in DropDownView
 public enum dropDownViewType: Int {
     case string
     case image
 }
 
-public enum dropDownViewImageType: String {
+// Default image collection that can be set in DropDownView
+// rawValue is the name of the Image file
+public enum dropDownViewImages: String {
     case more_vert_white
     case more_vert_black
     case done_white
@@ -33,16 +35,14 @@ public enum dropDownViewImageType: String {
     case search_black
 }
 
-final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
+// View displayed when DropDown
+public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    var tableView = UITableView()
-    private var dropDownOptions = [Any]() // Display the value of this Array in dropDownView
-    private var viewType: dropDownViewType = .string // What sets the value type to display in dropDownView. If string, treat dropDownViewOptions as String type
-    
-    var delegate: dropDownViewProtocol! // delegate for sending messages to dropDownBtn
-    
+    public var tableView = UITableView()
     public var dropViewWidth: CGFloat? // Set the value when changing width of dropDownView to width of dropDownBtn
-    
+    public var separatorStyle: UITableViewCellSeparatorStyle = .none
+    public var isBounces: Bool = false
+
     // Override the backgroundColor and set the value of tableView backgroundColor. Set backgroundColor of DropDownView to clear
     override public var backgroundColor: UIColor? {
         get {
@@ -51,6 +51,51 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
         set(newValue) {
             tableView.backgroundColor = newValue ?? .clear
         }
+    }
+
+    internal var delegate: dropDownViewProtocol! // delegate for sending messages to dropDownBtn
+
+    private var dropDownOptions = [Any]() // Display the value of this Array in dropDownView
+    private var viewType: dropDownViewType = .string // What sets the value type to display in dropDownView. If string, treat dropDownViewOptions as String type
+
+    
+    // func to set the option to display in dropDownView and dropDownViewType.
+    public func setupDropDownViews(options: [String]) {
+        for option in options {
+            dropDownOptions.append(option)
+        }
+        viewType = dropDownViewType.string
+    }
+
+    public func setupDropDownViews(options: [dropDownViewImages]) {
+        for option in options {
+            dropDownOptions.append(DropDownBtn.getImage(named: option.rawValue))
+        }
+        viewType = dropDownViewType.image
+    }
+
+//    public func setupDropDownViews<T>(options: [T], type: dropDownViewType) {
+//        for option in options {
+//            dropDownOptions.append(option)
+//        }
+//        viewType = type
+//    }
+
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dropDownOptions.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return setupDropDownViewCell(indexPath: indexPath.row)
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sendMessageToDropDownBtn(indexPath: indexPath.row)
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private override init(frame: CGRect) {
@@ -63,15 +108,13 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
         initSetup()
     }
     
-    /** Set up Constraints, backgroundColor etc., do first setup
-     */
+    /** Set up Constraints, backgroundColor etc., do first setup */
     private func initSetup() {
-        tableView.backgroundColor = .clear
-        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
-        
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = separatorStyle
+        tableView.bounces = isBounces
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(tableView)
         
@@ -81,63 +124,47 @@ final public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSou
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
-    // func to set the option to display in dropDownView and dropDownViewType.
-    public func setupDropDownViews<T>(options: [T], type: dropDownViewType) {
-        for option in options {
-            dropDownOptions.append(option)
-        }
-        viewType = type
-    }
-
-    public func setupDropDownViews(options: [dropDownViewImageType]) {
-        for option in options {
-//            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle.current, compatibleWith: nil)!)
-            dropDownOptions.append(UIImage(named: option.rawValue, in: Bundle(identifier: "SCDropDownMenu"), compatibleWith: nil)!)
-        }
-        viewType = dropDownViewType.image
-    }
-    
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dropDownOptions.count
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    /** Set up DropDownViewCell */
+    private func setupDropDownViewCell(indexPath: Int) ->  UITableViewCell {
         let cell = UITableViewCell()
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
         
-        let label = UILabel(frame: CGRect(x: 5, y: 0, width: tableView.frame.width - 10, height: cell.frame.height))
-        cell.addSubview(label)
-        
         switch viewType {
         case .image:
-            cell.imageView?.image = dropDownOptions[indexPath.row] as? UIImage
+            let imageView = UIImageView(frame: DropDownBtn.dropDownImageFrame)
+            imageView.center = CGPoint(x: tableView.frame.width / 2, y: cell.frame.height / 2)
+            imageView.image = self.dropDownOptions[indexPath] as? UIImage
+            imageView.contentMode = .scaleAspectFit
+            cell.addSubview(imageView)
+//            cell.imageView?.image = self.dropDownOptions[indexPath] as? UIImage
+//            cell.imageView?.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: cell.frame.height)
+            
         case .string:
+            let label = UILabel(frame: CGRect(x: 5, y: 0, width: tableView.frame.width - 10, height: cell.frame.height))
+            cell.addSubview(label)
             label.adjustsFontSizeToFitWidth = true
             label.numberOfLines = 1
-            //        cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
             label.textAlignment = .center
             label.textColor = .white
-            label.text = dropDownOptions[indexPath.row] as? String
-            
+            label.text = dropDownOptions[indexPath] as? String
         }
         
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // send a message to DropDownBtn
+    private func sendMessageToDropDownBtn(indexPath: Int) {
         switch viewType {
         case .string:
-            delegate.dropDownPressed(option: dropDownOptions[indexPath.row] as! String, indexPath: indexPath.row, dropDownViewType: viewType)
+            delegate.dropDownPressed(option: dropDownOptions[indexPath] as! String,
+                                     indexPath: indexPath,
+                                     dropDownViewType: viewType)
         case .image:
-            delegate.dropDownPressed(option: dropDownOptions[indexPath.row] as! UIImage, indexPath: indexPath.row, dropDownViewType: viewType)
+            delegate.dropDownPressed(option: dropDownOptions[indexPath] as! UIImage,
+                                     indexPath: indexPath,
+                                     dropDownViewType: viewType)
         }
-        
-        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
