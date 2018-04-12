@@ -52,7 +52,6 @@ public class DropDownView: UIView, UITableViewDelegate {
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
-    
     // func to set the option to display in dropDownView and dropDownViewType.
     public func setupDropDownViews(options: [String]) {
         for option in options {
