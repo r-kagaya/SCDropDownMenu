@@ -38,14 +38,14 @@ public enum dropDownBtnType: String {
 
 
 final public class DropDownBtn: UIButton, dropDownViewProtocol {
-
+    
     public var dropView = DropDownView() // DropDownView held by dropDownBtn
     public var delegate: SCDropDownMenuDelegate? // Protocol for sending messages to the caller
     public static var dropDownImageFrame = CGRect()
     
     private var dropViewHeight = NSLayoutConstraint() // A value indicating the dropView height of the dropDownBtn
     private var btnType: dropDownBtnType = .sentence // The value of the configured dropDownBtnType. The initial value is sentence
-
+    
     /** initializer. frame is set to initialize with zero by default. You must specify dropDownBtnType
      */
     public convenience init(frame: CGRect = .zero, dropDownBtnType type: dropDownBtnType) {
@@ -53,11 +53,11 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         btnType = type
         setupBtnFrom(type: type)
     }
-
+    
     override public func didMoveToSuperview() {
         setupDropDownBtnLayout()
     }
-    
+
     var isOpen = false
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         isOpen ? dismissDropDownView() : presentDropDownView()
@@ -68,7 +68,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         to.transform = CGAffineTransform(rotationAngle: CGFloat(rotateAngle))
     }
     
-
+    
     /** Delegate method called when dropDownView is selected.
      * option: T -> The value of the selected dropDownViewOptions
      * indexPath: Int -> IndexPath of the selected dropDownViewOptions
@@ -88,7 +88,7 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         let bundle = Bundle(for: self)
         return UIImage(named: named, in: bundle, compatibleWith: nil)!
     }
-
+    
     /** Present DropDownView */
     private func presentDropDownView() {
         delegate?.dropDownViewWillShow(dropDownBtn: self)
@@ -152,22 +152,22 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
     private func setupDropDownBtnLayout() {
         self.superview?.addSubview(dropView)
         self.superview?.bringSubview(toFront: dropView)
-    
+        
         dropView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         dropView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-    
+        
         if let width = dropView.dropViewWidth {
-        dropView.widthAnchor.constraint(equalToConstant: width).isActive = true
+            dropView.widthAnchor.constraint(equalToConstant: width).isActive = true
         } else {
-        dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+            dropView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         }
-    
+        
         dropViewHeight = dropView.heightAnchor.constraint(equalToConstant: 0)
-    
+        
         guard let imgView = imageView else { return }
         DropDownBtn.dropDownImageFrame = imgView.frame
     }
-    
+
     /** Perform initial setup according to the type of selected dropDownBtn
      */
     private func setupBtnFrom(type: dropDownBtnType) {
@@ -182,6 +182,6 @@ final public class DropDownBtn: UIButton, dropDownViewProtocol {
         }
     }
     
-
+    
 }
 

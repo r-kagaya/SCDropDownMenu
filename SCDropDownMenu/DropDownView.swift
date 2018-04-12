@@ -23,7 +23,36 @@ public class DropDownView: UIView, UITableViewDelegate {
     internal var delegate: dropDownViewProtocol! // delegate for sending messages to dropDownBtn
     
     private var dataSource: DropDownViewDataSource!
-
+    
+    private override init(frame: CGRect) {
+        super.init(frame: frame)
+        initSetup()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initSetup()
+    }
+    
+    /** Set up Constraints, backgroundColor etc., do first setup */
+    private func initSetup() {
+        dataSource = DropDownViewDataSource(presenter: self)
+        
+        tableView.delegate = self
+        tableView.dataSource = dataSource
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = separatorStyle
+        tableView.bounces = isBounces
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(tableView)
+        
+        tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    }
+    
+    
     // func to set the option to display in dropDownView and dropDownViewType.
     public func setupDropDownViews(options: [String]) {
         for option in options {
@@ -45,41 +74,11 @@ public class DropDownView: UIView, UITableViewDelegate {
     //        }
     //        viewType = type
     //    }
-
+    
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         sendMessageToDropDownBtn(indexPath: indexPath.row)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
-        initSetup()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initSetup()
-    }
-    
-    /** Set up Constraints, backgroundColor etc., do first setup */
-    private func initSetup() {
-        
-        dataSource = DropDownViewDataSource(viewWidth: frame.width)
-        
-        tableView.delegate = self
-        tableView.dataSource = dataSource
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = separatorStyle
-        tableView.bounces = isBounces
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(tableView)
-        
-        tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-    }
-
     
     // send a message to DropDownBtn
     private func sendMessageToDropDownBtn(indexPath: Int) {
@@ -94,7 +93,6 @@ public class DropDownView: UIView, UITableViewDelegate {
                                      dropDownViewType: dataSource.viewType)
         }
     }
-    
     
 }
 

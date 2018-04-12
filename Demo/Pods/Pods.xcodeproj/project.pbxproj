@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BD1D8E00730C8EABDE4CA0E8AEC36C9 /* SCDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */; };
+		04E6424B85AF7F17147C7733FABE4D18 /* SCDropDownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DFF617DD6C756D26FE71F75DDD1919 /* SCDropDownMenu-dummy.m */; };
+		44FCEB7483E7B6F731CFBBE2FC97F14A /* DropDownViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075289BB03FAB4A86CB759461E936D03 /* DropDownViewType.swift */; };
 		6BC6395393B2C5E4FB53F12565425851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6FEE8BACC9AD947B5997F40738B6173B /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */; };
-		84D376A60B1EC2CB77972D7DC58444A3 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F712606265759533903E69D69E69 /* DropDownView.swift */; };
+		926C8ACF1D21DBED03AD8C872FE8DB57 /* DropDownViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9E822926B9A6BD830EC3DBB6A7483 /* DropDownViewDataSource.swift */; };
 		A894CBBD981CA896A28610E5670063C5 /* Pods-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7C74CE837DCC5F2A18303C12601C54 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */; };
+		C7E1C339F0264725B195D6C801D47896 /* DropDownViewImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20ABDCA0242F71661C8474486DC91AA /* DropDownViewImages.swift */; };
+		D6EECFB137835845E462377A1478254D /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC196D97FC71CA2D6FBCB27B0814DCD /* DropDownView.swift */; };
+		DD7C74CE837DCC5F2A18303C12601C54 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1BE74D9C02B7D3EB2BAC7A0C0AE801 /* Media.xcassets */; };
 		E10FC6A1EF0230870DBC271CA9091F7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		E1F8200FE136F86A02A9B224FFD24855 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */; };
-		FD2CE59F9761080DF1E867910C6714A0 /* SCDropDownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3759E61A7F4D6CD5D8EB3A6B9742BD4 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D2A45BB93E671DB4F08BE5B2C1EDA /* DropDownBtn.swift */; };
+		FD2CE59F9761080DF1E867910C6714A0 /* SCDropDownMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D17A7FE382E0E795C83745BA78753A4A /* SCDropDownMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,29 +32,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownBtn.swift; path = SCDropDownMenu/DropDownBtn.swift; sourceTree = "<group>"; };
+		075289BB03FAB4A86CB759461E936D03 /* DropDownViewType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownViewType.swift; path = SCDropDownMenu/DropDownViewType.swift; sourceTree = "<group>"; };
 		1297CC1D72EFE436360CFBB898F8CB2E /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
-		18DFBD547939032C78F638BCA4F47951 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DFBD547939032C78F638BCA4F47951 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Demo.framework; path = "Pods-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1965FF76BB91163730C384D7B1E2C4FB /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
-		209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = SCDropDownMenu/Media.xcassets; sourceTree = "<group>"; };
-		255A48D297C3140ECA4840D4795247E1 /* SCDropDownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCDropDownMenu.modulemap; sourceTree = "<group>"; };
 		275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		27BC0EBDAE14E89E57D584378BDA3116 /* Pods-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Demo-umbrella.h"; sourceTree = "<group>"; };
 		282ECFCD0084F94EC1DED9401AAFE7F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCDropDownMenu-dummy.m"; sourceTree = "<group>"; };
-		5D271875198248C43604BC0DF1B13635 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1BE74D9C02B7D3EB2BAC7A0C0AE801 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = SCDropDownMenu/Media.xcassets; sourceTree = "<group>"; };
+		3041EA911FBDC6BC403D232C0B40024E /* SCDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
+		35A9E822926B9A6BD830EC3DBB6A7483 /* DropDownViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownViewDataSource.swift; path = SCDropDownMenu/DropDownViewDataSource.swift; sourceTree = "<group>"; };
+		39BBA7DE4CB999358A5A9B71BA00A53E /* SCDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCDropDownMenu.xcconfig; sourceTree = "<group>"; };
+		5770ACB34331BA8F2DE6AD5843552E1E /* SCDropDownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCDropDownMenu.modulemap; sourceTree = "<group>"; };
 		5EFCFC4782B9646B842EB839A267D7AA /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7A01701031823CCAC30B58767A21D8A4 /* Pods-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Demo.modulemap"; sourceTree = "<group>"; };
+		85DFF617DD6C756D26FE71F75DDD1919 /* SCDropDownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCDropDownMenu-dummy.m"; sourceTree = "<group>"; };
 		9154BF16DC759A1EDD6A1AB4E22AA07D /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		C228A1D92E6CEDB93C7A35E5E7AD31BF /* SCDropDownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-prefix.pch"; sourceTree = "<group>"; };
-		DA9CA09F85A489462C2F529A8CAF9FF4 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5F7D5EB5EC8326369D4D7E360574F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D17A7FE382E0E795C83745BA78753A4A /* SCDropDownMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-umbrella.h"; sourceTree = "<group>"; };
+		D20ABDCA0242F71661C8474486DC91AA /* DropDownViewImages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownViewImages.swift; path = SCDropDownMenu/DropDownViewImages.swift; sourceTree = "<group>"; };
+		DA9CA09F85A489462C2F529A8CAF9FF4 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCDropDownMenu.framework; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BD00EE3F4FBA187EE15A5C9968F90 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
-		F481F712606265759533903E69D69E69 /* DropDownView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownView.swift; path = SCDropDownMenu/DropDownView.swift; sourceTree = "<group>"; };
-		FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCDropDownMenu.xcconfig; sourceTree = "<group>"; };
-		FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCDropDownMenu-umbrella.h"; sourceTree = "<group>"; };
+		EBC196D97FC71CA2D6FBCB27B0814DCD /* DropDownView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownView.swift; path = SCDropDownMenu/DropDownView.swift; sourceTree = "<group>"; };
+		FC5D2A45BB93E671DB4F08BE5B2C1EDA /* DropDownBtn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownBtn.swift; path = SCDropDownMenu/DropDownBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B1B84457D2B198266D726DACE75A36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E7CC9CE525B1379EDF1080EA9A68A23 /* SCDropDownMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2C6EE1B7829E35003BA6567A54045815 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,18 +97,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CD084D33780AFFB27C3E1CC4383EAC7 /* Support Files */ = {
+		4E7CC9CE525B1379EDF1080EA9A68A23 /* SCDropDownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				5D271875198248C43604BC0DF1B13635 /* Info.plist */,
-				255A48D297C3140ECA4840D4795247E1 /* SCDropDownMenu.modulemap */,
-				FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */,
-				4264BF2D19010ACF70F0C640FB1A0F6D /* SCDropDownMenu-dummy.m */,
-				C228A1D92E6CEDB93C7A35E5E7AD31BF /* SCDropDownMenu-prefix.pch */,
-				FC4A5BE2A3C5F520B7FBA0C8CDF5B77C /* SCDropDownMenu-umbrella.h */,
+				FC5D2A45BB93E671DB4F08BE5B2C1EDA /* DropDownBtn.swift */,
+				EBC196D97FC71CA2D6FBCB27B0814DCD /* DropDownView.swift */,
+				35A9E822926B9A6BD830EC3DBB6A7483 /* DropDownViewDataSource.swift */,
+				D20ABDCA0242F71661C8474486DC91AA /* DropDownViewImages.swift */,
+				075289BB03FAB4A86CB759461E936D03 /* DropDownViewType.swift */,
+				E17B7DE048FA2EB2A2C4AD0F04EEDD25 /* Resources */,
+				8691D565A8A6AB12F229DA951B8820E4 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SCDropDownMenu";
+			name = SCDropDownMenu;
+			path = SCDropDownMenu;
 			sourceTree = "<group>";
 		};
 		6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */ = {
@@ -105,31 +120,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7D3812598BD02AF49E88C2CE773F9B5C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E9B0857C09665C4A153E0562529E6299 /* SCDropDownMenu */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7D3812598BD02AF49E88C2CE773F9B5C /* Pods */,
+				21B1B84457D2B198266D726DACE75A36 /* Pods */,
 				2C6EE1B7829E35003BA6567A54045815 /* Products */,
 				6F2351C272926D3E0225FEFC2F9C5D1F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		B48D81D4E6D8D7C2B3C243EA3757D4F8 /* Resources */ = {
+		8691D565A8A6AB12F229DA951B8820E4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				209C94062D2E3AD390A7B6EAD1DD1208 /* Media.xcassets */,
+				BB5F7D5EB5EC8326369D4D7E360574F9 /* Info.plist */,
+				5770ACB34331BA8F2DE6AD5843552E1E /* SCDropDownMenu.modulemap */,
+				39BBA7DE4CB999358A5A9B71BA00A53E /* SCDropDownMenu.xcconfig */,
+				85DFF617DD6C756D26FE71F75DDD1919 /* SCDropDownMenu-dummy.m */,
+				3041EA911FBDC6BC403D232C0B40024E /* SCDropDownMenu-prefix.pch */,
+				D17A7FE382E0E795C83745BA78753A4A /* SCDropDownMenu-umbrella.h */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/SCDropDownMenu";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -166,15 +179,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E9B0857C09665C4A153E0562529E6299 /* SCDropDownMenu */ = {
+		E17B7DE048FA2EB2A2C4AD0F04EEDD25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				03DC9A5313A89E4E340106E95719D392 /* DropDownBtn.swift */,
-				F481F712606265759533903E69D69E69 /* DropDownView.swift */,
-				B48D81D4E6D8D7C2B3C243EA3757D4F8 /* Resources */,
-				2CD084D33780AFFB27C3E1CC4383EAC7 /* Support Files */,
+				2A1BE74D9C02B7D3EB2BAC7A0C0AE801 /* Media.xcassets */,
 			);
-			path = SCDropDownMenu;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 060D572E6589D4DE5929E0CE76DBC728 /* Build configuration list for PBXNativeTarget "SCDropDownMenu" */;
 			buildPhases = (
-				DC5DE2CB053B3C15F1DAD75849524951 /* Sources */,
+				350D62685A7C90A09964D2D1EDF3F028 /* Sources */,
 				0A60520EA85678D5CEE1994CB5499183 /* Frameworks */,
 				22287123C5DBAECA191370F7FEF58A02 /* Resources */,
 				C4753DDA9555D8ADCD0CF5B6C0A2C58A /* Headers */,
@@ -243,11 +253,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					5F84CC5E3924166C17C4160BC22BACF8 = {
-						LastSwiftMigration = 0930;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -279,21 +284,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		350D62685A7C90A09964D2D1EDF3F028 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3759E61A7F4D6CD5D8EB3A6B9742BD4 /* DropDownBtn.swift in Sources */,
+				D6EECFB137835845E462377A1478254D /* DropDownView.swift in Sources */,
+				926C8ACF1D21DBED03AD8C872FE8DB57 /* DropDownViewDataSource.swift in Sources */,
+				C7E1C339F0264725B195D6C801D47896 /* DropDownViewImages.swift in Sources */,
+				44FCEB7483E7B6F731CFBBE2FC97F14A /* DropDownViewType.swift in Sources */,
+				04E6424B85AF7F17147C7733FABE4D18 /* SCDropDownMenu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A40FF093EF7CE43B26C2C6A18446E073 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6FEE8BACC9AD947B5997F40738B6173B /* Pods-Demo-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC5DE2CB053B3C15F1DAD75849524951 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1F8200FE136F86A02A9B224FFD24855 /* DropDownBtn.swift in Sources */,
-				84D376A60B1EC2CB77972D7DC58444A3 /* DropDownView.swift in Sources */,
-				3BD1D8E00730C8EABDE4CA0E8AEC36C9 /* SCDropDownMenu-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +384,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A293EC6905CD2F770F31A1A57ACA0633 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -402,7 +409,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -411,7 +417,7 @@
 		};
 		69FC2A6DA3B8AEFFF1F5F50235238D76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */;
+			baseConfigurationReference = 39BBA7DE4CB999358A5A9B71BA00A53E /* SCDropDownMenu.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -446,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 275C17A46F39C36327493626A168B6D5 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -471,7 +476,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -481,7 +485,7 @@
 		};
 		B3CA7E84B2E56472F6870639D0040710 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC0328389452F81FF1FDA1F700D75D5F /* SCDropDownMenu.xcconfig */;
+			baseConfigurationReference = 39BBA7DE4CB999358A5A9B71BA00A53E /* SCDropDownMenu.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

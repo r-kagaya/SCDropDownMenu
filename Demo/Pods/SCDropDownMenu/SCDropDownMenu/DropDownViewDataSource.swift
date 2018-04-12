@@ -25,7 +25,7 @@ public class DropDownViewDataSource: NSObject, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return setupDropDownViewCell(indexPath: indexPath.row)
     }
-    
+
     /** Set up DropDownViewCell */
     private func setupDropDownViewCell(indexPath: Int) ->  UITableViewCell {
         let cell = UITableViewCell()
