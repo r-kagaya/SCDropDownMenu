@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SCDropDownMenu"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "Simple and customizable swift dropdown menu."
   s.description  = <<-DESC
                    Simple and customizable swift dropdown menu.

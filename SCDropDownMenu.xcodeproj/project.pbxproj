@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3208119207F7B1D001F4D85 /* DropDownViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3208118207F7B1C001F4D85 /* DropDownViewDataSource.swift */; };
+		E320811B207F7C40001F4D85 /* DropDownViewImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320811A207F7C40001F4D85 /* DropDownViewImages.swift */; };
+		E320811D207F7C59001F4D85 /* DropDownViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320811C207F7C59001F4D85 /* DropDownViewType.swift */; };
 		E32BC2BF20300F9F001963C1 /* SCDropDownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E32BC2E42030120F001963C1 /* DropDownBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E32030120F001963C1 /* DropDownBtn.swift */; };
 		E32BC2E620301216001963C1 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32BC2E520301216001963C1 /* DropDownView.swift */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3208118207F7B1C001F4D85 /* DropDownViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewDataSource.swift; sourceTree = "<group>"; };
+		E320811A207F7C40001F4D85 /* DropDownViewImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewImages.swift; sourceTree = "<group>"; };
+		E320811C207F7C59001F4D85 /* DropDownViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewType.swift; sourceTree = "<group>"; };
 		E32BC2BA20300F9F001963C1 /* SCDropDownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCDropDownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDropDownMenu.h; sourceTree = "<group>"; };
 		E32BC2BE20300F9F001963C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 			children = (
 				E32BC2E32030120F001963C1 /* DropDownBtn.swift */,
 				E32BC2E520301216001963C1 /* DropDownView.swift */,
+				E3208118207F7B1C001F4D85 /* DropDownViewDataSource.swift */,
+				E320811A207F7C40001F4D85 /* DropDownViewImages.swift */,
+				E320811C207F7C59001F4D85 /* DropDownViewType.swift */,
 				E32BC2BD20300F9F001963C1 /* SCDropDownMenu.h */,
 				E32BC2E720301222001963C1 /* Media.xcassets */,
 				E32BC2BE20300F9F001963C1 /* Info.plist */,
@@ -99,7 +108,7 @@
 		E32BC2B120300F9F001963C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "ryo kagaya";
 				TargetAttributes = {
 					E32BC2B920300F9F001963C1 = {
@@ -142,6 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E32BC2E42030120F001963C1 /* DropDownBtn.swift in Sources */,
+				E320811B207F7C40001F4D85 /* DropDownViewImages.swift in Sources */,
+				E320811D207F7C59001F4D85 /* DropDownViewType.swift in Sources */,
+				E3208119207F7B1D001F4D85 /* DropDownViewDataSource.swift in Sources */,
 				E32BC2E620301216001963C1 /* DropDownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +175,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -170,6 +183,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -223,6 +237,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -230,6 +245,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

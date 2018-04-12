@@ -58,6 +58,7 @@ public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     private var dropDownOptions = [Any]() // Display the value of this Array in dropDownView
     private var viewType: dropDownViewType = .string // What sets the value type to display in dropDownView. If string, treat dropDownViewOptions as String type
 
+    
     // func to set the option to display in dropDownView and dropDownViewType.
     public func setupDropDownViews(options: [String]) {
         for option in options {
@@ -72,6 +73,13 @@ public class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
         viewType = dropDownViewType.image
     }
+
+//    public func setupDropDownViews<T>(options: [T], type: dropDownViewType) {
+//        for option in options {
+//            dropDownOptions.append(option)
+//        }
+//        viewType = type
+//    }
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
