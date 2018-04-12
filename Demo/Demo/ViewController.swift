@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         navigationDropDownMenu.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         navigationDropDownMenu.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         navigationDropDownMenu.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
-        navigationDropDownMenu.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        navigationDropDownMenu.heightAnchor.constraint(equalToConstant: 80).isActive = true
     }
     
     private func setupDropDownButton() {
@@ -38,9 +38,7 @@ class ViewController: UIViewController {
         dropDownBtn.dropView.setupDropDownViews(options: [.add_black, .delete_white, .play_arrow_white])
         dropDownBtn.dropView.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
         self.view.addSubview(dropDownBtn)
-        
-//        dropDownBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        dropDownBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+
         dropDownBtn.widthAnchor.constraint(equalToConstant: 100).isActive = true
         dropDownBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
@@ -50,7 +48,7 @@ class ViewController: UIViewController {
                                                      toItem: navigationDropDownMenu,
                                                      attribute: .top,
                                                      multiplier: 1.0,
-                                                     constant: 200)
+                                                     constant: 250)
         self.view.addConstraint(dropDownBtnTopConstraint)
         
         let dropDownBtnTrailingConstraint = NSLayoutConstraint(item: dropDownBtn,
