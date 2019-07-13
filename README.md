@@ -66,7 +66,7 @@ extension ViewController: SCDropDownMenuDelegate {
             dropDownBtn.backgroundColor = UIColor(red: 166/255, green: 193/255, blue: 238/255, alpha: 1.0)
         }, completion: { _ in
             UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseOut], animations: {
-//                dropDownBtn.imageView?.image = UIImage(named: "more_vert_white")!
+                dropDownBtn.imageView?.image = UIImage(named: "more_vert_white")!
             })
         })
     }
@@ -74,7 +74,7 @@ extension ViewController: SCDropDownMenuDelegate {
     func dropDownViewWillHide(dropDownBtn: DropDownBtn) {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseIn], animations: {
             dropDownBtn.backgroundColor = .black
-//            dropDownBtn.imageView?.image = UIImage(named: "more_vert_black")!
+            dropDownBtn.imageView?.image = UIImage(named: "more_vert_black")!
         }, completion: { _ in
             UIView.animate(withDuration: 0.2, delay: 0.0, options: [.curveEaseOut], animations: {
                 dropDownBtn.imageView?.transform = .identity
