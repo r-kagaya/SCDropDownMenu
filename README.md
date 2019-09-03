@@ -1,5 +1,4 @@
 # SCDropDownMenu
-
 ## Requirements
 SCDropDownMenu is written in Swift 3. iOS 8.0+ Required
 
